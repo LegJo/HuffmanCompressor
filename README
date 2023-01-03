@@ -1,0 +1,16 @@
+l'executable "Huffman" sert à encoder ou a decoder un fichier contenant du texte selon la methode Huffman 
+
+Syntaxe : ./Huffman -OPTION inputfilename outputfilename -dev
+-OPTION -C Encryptage du fichier
+		      -D Decryptage du fichier
+l'option -dev n'est pas necessaire, elle permet la création du fichier dev.txt 
+
+Details d'utilisation : 
+- le programme ne s'execute pas si le fichier input n'existe pas ou que on n'a pas la permission de lecture de ce dernier
+- si le fichier output existe déja il sera ecraser
+- le fichier dev.txt contiendra le tableau et l'arbre d'encodage (avec l'option -C) ou le tableau et l'arbre retrouver lors du desencodage (avec l'option -D)
+- le fichier dev.txt est supprimer a chaque execution (il sera recreer avec son contenues actualiser si l'execution a ete faite avec l'argument -dev) 
+-le fichier dev.txt ne peut etre lu qu'en UTF-8, UTF-7 ou extended ASCII (conseil : l'ouvrir avec KWrite) 
+-la commande ./Huffman -help permet l'affichage de ce fichier README
+-l'option -dev permet de ne pas supprimer le fichier "tmp.txt" qui contient le code binaire du fichier encoder mais coder en caractere ASCII
+-"make" pour compiler et "make clean" pour supprimer les fichiers objets
